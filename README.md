@@ -7,12 +7,14 @@ Build a task list per the UI design that will perform the following operations:
   * Add tasks with name
   * Mark tasks as "done". Tasks that are "done" should be highlighted.
   * Remove tasks
+* UI should update when any tasks that alter the list occur
 
 ## UI
 ![task list](tasklist.png)
 
 ## API
 `GET /list` Lists all tasks.
+`Response:`
 ```json
 [
   {
@@ -35,32 +37,32 @@ Build a task list per the UI design that will perform the following operations:
 ```
 
 `POST /add` Adds a task to the list. Tasks are given a `status: false` automatically.
+`Request:`
 ```json
-// request payload
 {
   name: "Buy some milk"
 }
 ```
 
 `POST /add` Appends a task to the list
+`Request:`
 ```json
-// request payload
 {
   name: "Buy some milk"
 }
 ```
 
 `DELETE /remove` Removes task at the specified index
+`Request:`
 ```json
-// request payload
 {
   index: 1
 }
 ```
 
 `POST /update` Updates/replaces a task at the specific index
+`Request:`
 ```json
-// request payload
 {
   index: 1,
   name: "Buy some milk",
@@ -69,8 +71,8 @@ Build a task list per the UI design that will perform the following operations:
 ```
 
 `POST /insert` Adds a task at the specified index
+`Request:`
 ```json
-// request payload
 {
   name: "Buy some milk",
   status: false
