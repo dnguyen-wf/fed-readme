@@ -1,19 +1,18 @@
 # Scenario
 
-Build a task list that will perform the following operations:
+Build a task list per the UI design that will perform the following operations:
 
-* Load and save items to an API. Data should persist refreshing.
-* Add tasks with name
-* Remove tasks
-* Mark tasks as "done". Tasks that are "done" should be highlighted.
-* Reorder tasks
+* Interact with API to
+  * List all items
+  * Add tasks with name
+  * Mark tasks as "done". Tasks that are "done" should be highlighted.
+  * Remove tasks
 
 ## UI
 ![task list](tasklist.png)
 
 ## API
-`GET /list`
-Lists all tasks.
+`GET /list` Lists all tasks.
 ```json
 [
   {
@@ -35,8 +34,7 @@ Lists all tasks.
 ]
 ```
 
-`POST /add`
-Adds a task to the list. Tasks are given a `status: false` automatically.
+`POST /add` Adds a task to the list. Tasks are given a `status: false` automatically.
 ```json
 // request payload
 {
@@ -44,8 +42,7 @@ Adds a task to the list. Tasks are given a `status: false` automatically.
 }
 ```
 
-`POST /add`
-Appends a task to the list
+`POST /add` Appends a task to the list
 ```json
 // request payload
 {
@@ -53,8 +50,7 @@ Appends a task to the list
 }
 ```
 
-`DELETE /remove`
-Removes task at the specified index
+`DELETE /remove` Removes task at the specified index
 ```json
 // request payload
 {
@@ -62,8 +58,17 @@ Removes task at the specified index
 }
 ```
 
-`POST /insert`
-Adds a task at the specified index
+`POST /update` Updates/replaces a task at the specific index
+```json
+// request payload
+{
+  index: 1,
+  name: "Buy some milk",
+  status: false
+}
+```
+
+`POST /insert` Adds a task at the specified index
 ```json
 // request payload
 {
@@ -74,3 +79,4 @@ Adds a task at the specified index
 
 ## Reference
 * Using Fetch API - https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+* Using Axios - https://github.com/axios/axios#example
