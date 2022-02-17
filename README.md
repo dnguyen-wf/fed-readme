@@ -40,7 +40,7 @@ Build a task list per the UI design that will perform the following operations:
 `Request:`
 ```json
 {
-  name: "Buy some milk"
+  "name": "Buy some milk"
 }
 ```
 
@@ -48,7 +48,7 @@ Build a task list per the UI design that will perform the following operations:
 `Request:`
 ```json
 {
-  name: "Buy some milk"
+  "name": "Buy some milk"
 }
 ```
 
@@ -56,7 +56,7 @@ Build a task list per the UI design that will perform the following operations:
 `Request:`
 ```json
 {
-  index: 1
+  "index": 1
 }
 ```
 
@@ -64,9 +64,9 @@ Build a task list per the UI design that will perform the following operations:
 `Request:`
 ```json
 {
-  index: 1,
-  name: "Buy some milk",
-  status: false
+  "index": 1,
+  "name": "Buy some milk",
+  "status": false
 }
 ```
 
@@ -74,8 +74,8 @@ Build a task list per the UI design that will perform the following operations:
 `Request:`
 ```json
 {
-  name: "Buy some milk",
-  status: false
+  "name": "Buy some milk",
+  "status": false
 }
 ```
 
